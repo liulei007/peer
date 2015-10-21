@@ -1,0 +1,14 @@
+#!/bin/bash
+
+sudo yum install java-1.8.0-openjdk-devel -y
+
+#sudo alternatives --config java
+
+#sudo alternatives --config java  /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+sudo alternatives --config java <<< 2
+#echo $JAVA_HOME
+#ls -l /usr/lib/jvm/java
+#ls -l /etc/alternatives/java_sdk
+
+
+export JAVA_HOME=/usr/lib/jvm/java
