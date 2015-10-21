@@ -6,9 +6,27 @@ sudo yum install java-1.8.0-openjdk-devel -y
 
 #sudo alternatives --config java  /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
 sudo alternatives --config java <<< 2
+#echo 2 | sudo alternatives --config java
 #echo $JAVA_HOME
 #ls -l /usr/lib/jvm/java
 #ls -l /etc/alternatives/java_sdk
 
 
 export JAVA_HOME=/usr/lib/jvm/java
+
+
+#Yet another Scripts
+
+#install the jre
+
+##sshRetValue=`ssh -p "22" -i $HOME/sshids/idrsa-1.old ${1} " /home/geiser/jms_adapter/jre-6u25-linux-i586.bin "`;
+##sshRetValue=`echo $?`;
+##if [ "$sshRetValue" -eq 0 ];then
+ ##       echo "java jre installed successfully";
+ ##       #set the alternative and stuff if needed
+ ##       ssh -p "22" -i $HOME/sshids/idrsa-1.old ${1} " /usr/sbin/alternatives --install /usr/bin/java java /root/jre1.6.0_25/bin/java 2 ";
+ ##       echo 2 | ssh -p "35903" -i $HOME/sshids/idrsa-1.old ${1} " alternatives --config java ";
+##else
+##        echo "java jre installation failed";
+##fi
+
